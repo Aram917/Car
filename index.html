@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #000;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        #home {
+            background: url('https://source.unsplash.com/1600x900/?car') no-repeat center center/cover;
+            color: white;
+        }
+
+        #about {
+            background: #ddd;
+        }
+
+        #models {
+            background: #bbb;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 50px;
+        }
+
+        .model-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .model-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        #contact {
+            background: #999;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Car World</h1>
+        <p>Your dream car is just a click away!</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We provide high-quality cars with the latest technology and comfort.</p>
+    </section>
+
+    <section id="models">
+        <h2>Our Car Models</h2>
+
+        <div class="model-card">
+            <img src="https://source.unsplash.com/300x200/?sports-car" alt="Sports Car">
+            <h3>Sports Car</h3>
+            <p>Fast and stylish with high performance.</p>
+        </div>
+
+        <div class="model-card">
+            <img src="https://source.unsplash.com/300x200/?luxury-car" alt="Luxury Car">
+            <h3>Luxury Car</h3>
+            <p>Experience comfort with premium features.</p>
+        </div>
+
+        <div class="model-card">
+            <img src="https://source.unsplash.com/300x200/?suv" alt="SUV">
+            <h3>SUV</h3>
+            <p>Perfect for adventure and off-road trips.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Car World. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Message sent successfully!");
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
